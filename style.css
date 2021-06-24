@@ -1,0 +1,130 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: content-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-color: thistle;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__options {
+  width: 700px;
+  height: 100px;
+  border-right: initial;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container__board {
+  display: grid;
+  width: 700px;
+  height: 700px;
+  background-color: rgb(221, 255, 255);
+  border: 1px solid black;
+}
+
+.container__board__cell {
+  border: 1px solid black;
+  filter: brightness(100%);
+}
+
+.btn {
+  padding: 0 .5rem;
+  min-width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(85, 85, 85);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .1s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-rainbow {
+  background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+}
+
+.btn-shadow {
+  background-image:
+    linear-gradient(
+      to bottom right, 
+      rgb(85, 85, 85), rgb(34, 34, 34)
+    );
+}
+
+
+
+
+@media (max-width: 760px) {
+  * {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 0 .4rem;
+    min-width: 70px;
+    height: 30px;
+  }
+
+  .container__board {
+    width: 500px;
+    height: 500px;
+  }
+  .container__options {
+    width: 500px;
+  }
+}
+
+@media (max-width: 530px) {
+  * {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 0 .2rem;
+    min-width: 70px;
+    height: 30px;
+  }
+
+  .container__board {
+    width: 300px;
+    height: 300px;
+  }
+  .container__options {
+    width: 300px;
+    height: 150px;
+    flex-direction: column-reverse;
+  }
+  .btn {
+    margin-top: 5px;
+  }
+}
